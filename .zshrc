@@ -32,6 +32,9 @@ if hash lvim > /dev/null; then
   alias lv=lvim
 fi
 
+if hash google-chrome-stable > /dev/null; then
+  CHROME_EXECUTABLE=$(which google-chrome-stable)
+fi
 GHISTORY="git log --oneline --all --graph"
 if hash git > /dev/null; then
   alias gh=$GHISTORY

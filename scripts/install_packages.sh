@@ -80,5 +80,3 @@ do
 done
 
 
-# Set zsh as the default shell
-chsh -s /usr/bin/zsh

@@ -23,6 +23,10 @@ lvim.keys.command_mode["<C-l>"] = "<Right>"
 
 -- Rename symbol
 lvim.keys.normal_mode["<F2>"] = "<cmd>lua vim.lsp.buf.rename()<cr>"
+
+-- Makes the floating popups focusable (SHIFT + K) and scrollable
+lvim.lsp.float.focusable = true
+
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
 -- local _, actions = pcall(require, "telescope.actions")

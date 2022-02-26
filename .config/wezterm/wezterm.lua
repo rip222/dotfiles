@@ -13,4 +13,8 @@ return {
     top = 0,
     bottom = 0,
   },
+  keys = {
+  {key="[", mods="ALT", action=wt.action{ActivateTabRelative=-1}},
+  {key="]", mods="ALT", action=wt.action{ActivateTabRelative=1}},
+  }
 }

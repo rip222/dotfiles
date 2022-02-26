@@ -1,6 +1,7 @@
 #!/bin/bash
 
 packages=(
+  "docker",
   "bitwarden",
   "virtualbox",
   "diff3",

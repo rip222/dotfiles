@@ -25,6 +25,9 @@ packages=(
   "wezterm",
   "gitui",
   "curl",
+  "bottom",
+  "xplr",
+  "bandwhich",
 )
 
 aur_packages=(

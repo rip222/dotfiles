@@ -25,6 +25,7 @@ lvim.keys.command_mode["<C-l>"] = "<Right>"
 
 -- Rename symbol
 lvim.keys.normal_mode["<F2>"] = "<cmd>lua vim.lsp.buf.rename()<cr>"
+lvim.keys.normal_mode["<U>"] = "<C-r>"
 
 -- Makes the floating popups focusable (SHIFT + K) and scrollable
 lvim.lsp.float.focusable = true

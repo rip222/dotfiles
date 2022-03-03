@@ -1,8 +1,6 @@
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = {
-  pattern = "[^.html]"
-}
+lvim.format_on_save = true
 lvim.colorscheme = "gruvbox"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]

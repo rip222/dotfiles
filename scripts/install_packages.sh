@@ -28,6 +28,7 @@ packages=(
   "bottom",
   "xplr",
   "bandwhich",
+  "youtube-dl",
 )
 
 aur_packages=(

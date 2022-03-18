@@ -29,6 +29,8 @@ packages=(
   "xplr",
   "bandwhich",
   "youtube-dl",
+  "monero-gui",
+  "xmrig-bin",
 )
 
 aur_packages=(

@@ -23,7 +23,7 @@ lvim.keys.command_mode["<C-l>"] = "<Right>"
 
 -- Rename symbol
 lvim.keys.normal_mode["<F2>"] = "<cmd>lua vim.lsp.buf.rename()<cr>"
-lvim.keys.normal_mode["U"] = {"<C-r>", {noremap = true}}
+lvim.keys.normal_mode["U"] = { "<C-r>", { noremap = true } }
 
 -- Makes the floating popups focusable (SHIFT + K) and scrollable
 lvim.lsp.float.focusable = true
@@ -60,7 +60,9 @@ lvim.lsp.float.focusable = true
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.dashboard.active = true
+-- lvim.builtin.dashboard.active = true
+lvim.builtin.alpha.active = true
+lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
@@ -153,4 +155,3 @@ lvim.plugins = {
 -- }
 
 vim.opt.relativenumber = true
-

@@ -31,6 +31,14 @@ vim.keymap.set("n", "<S-Tab>", "<<", opts)
 vim.keymap.set("v", "<Tab>", ">gv", opts)
 vim.keymap.set("v", "<S-Tab>", "<gv", opts)
 
+-- Move current line / block with Alt-j/k ala vscode.
+vim.keymap.set("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
+vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", opts)
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", opts)
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv-gv", opts)
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv-gv", opts)
+
 -- Emulate arrow keys in edit mode
 vim.keymap.set("i", "<C-j>", "<Down>")
 vim.keymap.set("i", "<C-k>", "<Up>")

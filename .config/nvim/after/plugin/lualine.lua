@@ -4,11 +4,11 @@ local status, mod = pcall(require, 'lualine')
 if not status then
   return
 end
-mod.setup {
+mod.setup({
   options = {
     icons_enabled = true,
-    theme = 'onedark',
+    theme = theme,
     component_separators = '|',
     section_separators = '',
   },
-}
+})

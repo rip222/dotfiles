@@ -1,3 +1,5 @@
+--[[ Control global theme of vim.coloscheme and lualine]]
+theme = 'onedark' -- 'or gruvbox'
 require('user')
 
 -- The line beneath this is called `modeline`. See `:help modeline`

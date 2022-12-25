@@ -3,7 +3,7 @@
 -- 	print('Reload module not found')
 -- 	return;
 -- end
-require("user.set")
-require("user.packer")
-require("user.remap")
-require("user.misc")
+require('user.set')
+require('user.packer')
+require('user.remap')
+require('user.misc')

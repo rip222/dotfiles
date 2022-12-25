@@ -5,9 +5,18 @@ if not status then
   return
 end
 
-mod.setup {
+mod.setup({
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help' },
+  ensure_installed = {
+    'c',
+    'cpp',
+    'go',
+    'lua',
+    'python',
+    'rust',
+    'typescript',
+    'help',
+  },
 
   highlight = { enable = true },
   indent = { enable = true },
@@ -64,5 +73,4 @@ mod.setup {
       },
     },
   },
-}
-
+})

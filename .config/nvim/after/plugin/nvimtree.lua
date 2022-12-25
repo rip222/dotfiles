@@ -1,15 +1,15 @@
-local status, mod = pcall(require, "nvim-tree")
+local status, mod = pcall(require, 'nvim-tree')
 if not status then
   return
 end
 
 mod.setup({
-  sort_by = "case_sensitive",
+  sort_by = 'case_sensitive',
   view = {
     adaptive_size = true,
     mappings = {
       list = {
-        { key = "u", action = "dir_up" },
+        { key = 'u', action = 'dir_up' },
       },
     },
   },

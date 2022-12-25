@@ -5,7 +5,8 @@
 vim.o.hlsearch = false
 
 -- Make line numbers default
-vim.wo.number = true
+vim.o.number = true
+vim.o.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
@@ -51,3 +52,5 @@ vim.o.scrolloff = 10
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+
+vim.g.rustfmt_autosave = 1

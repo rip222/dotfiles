@@ -85,7 +85,15 @@ require('packer').startup(function(use)
   })
 
   use('BeastCode/VSCode-Angular-TypeScript-Snippets')
-
+  use({
+    'Equilibris/nx.nvim',
+    requires = {
+      'nvim-telescope/telescope.nvim',
+    },
+    config = function()
+      require('nx').setup({})
+    end,
+  })
   use('rust-lang/rust.vim')
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua

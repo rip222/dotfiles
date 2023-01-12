@@ -96,6 +96,8 @@ require('packer').startup(function(use)
   })
   use('rust-lang/rust.vim')
 
+  use({ 'akinsho/toggleterm.nvim', tag = '*' })
+
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
   if has_plugins then

@@ -1,4 +1,4 @@
--- Keymaps for better default experience
+-- Keymaps for bettem default experiemce
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
@@ -128,4 +128,13 @@ if telescope_installed then
     builtin.diagnostics,
     { desc = '[S]earch [D]iagnostics' }
   )
+end
+
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+if vim.cmd.ToggleTerm then
+  vim.keymap.set('n', '<C-\\>', vim.cmd.ToggleTerm)
+  vim.keymap.set('t', '<C-\\>', vim.cmd.ToggleTerm)
+  vim.keymap.set('n', '2<C-\\>', function()
+    vim.cmd('2ToggleTerm')
+  end)
 end

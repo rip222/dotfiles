@@ -4,7 +4,6 @@ local on_attach = function(_, bufnr)
   -- NOTE: Remember that lua is a real programming language, and as such it is possible
   -- to define small helper and utility functions so you don't have to repeat yourself
   -- many times.
-  --
   -- In this case, we create a function that lets us more easily define mappings specific
   -- for LSP related items. It sets the mode, buffer and description for us each time.
   local nmap = function(keys, func, desc)
@@ -81,6 +80,9 @@ local servers = {
   'html',
   'eslint',
   'emmet_ls',
+  'prismals',
+  'angularls',
+  'svelte',
 }
 
 -- Ensure the servers above are installed
@@ -90,6 +92,9 @@ require('mason-lspconfig').setup({
 
 -- nvim-cmp supports additional completion capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 for _, lsp in ipairs(servers) do
@@ -131,7 +136,7 @@ require('lspconfig').sumneko_lua.setup({
 })
 
 require('lspconfig').emmet_ls.setup({
-  -- on_attach = on_attach,
+  on_attach = on_attach,
   capabilities = capabilities,
   filetypes = {
     'html',
@@ -169,5 +174,14 @@ require('lspconfig').tsserver.setup({
       organize_imports,
       description = 'Organize Imports',
     },
+  },
+})
+
+require('lspconfig').prismals.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { 'prisma-language-server' },
+  filetypes = {
+    'prisma',
   },
 })

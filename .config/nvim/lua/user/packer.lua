@@ -56,6 +56,8 @@ require('packer').startup(function(use)
     after = 'nvim-treesitter',
   })
 
+  use('nvim-treesitter/playground')
+
   -- Git related plugins
   use('tpope/vim-fugitive')
   use('tpope/vim-rhubarb')
@@ -97,6 +99,8 @@ require('packer').startup(function(use)
   use('rust-lang/rust.vim')
 
   use({ 'akinsho/toggleterm.nvim', tag = '*' })
+
+  -- use({ 'neoclide/coc.nvim', branch = 'release' })
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')

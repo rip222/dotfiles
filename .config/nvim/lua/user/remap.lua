@@ -130,6 +130,10 @@ if telescope_installed then
   )
 end
 
+vim.keymap.set('n', '<leader>nx', function()
+  require('nx.generators').generators()
+end, { desc = '[NX] generators' })
+
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
 if vim.cmd.ToggleTerm then
   vim.keymap.set('n', '<C-\\>', vim.cmd.ToggleTerm)

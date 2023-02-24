@@ -2,11 +2,12 @@ local ok, wt = pcall(require, "wezterm");
 if not ok then
   return
 end
+
 return {
   color_scheme = "Gruvbox Dark",
   default_prog = { "/bin/zsh", "-l" },
   font = wt.font("JetBrains Mono"),
-  font_size = 14,
+  font_size = 18,
   window_padding = {
     left = 0,
     right = 0,
@@ -16,5 +17,8 @@ return {
   keys = {
     { key = "]", mods = "ALT", action = wt.action { ActivateTabRelative = 1 } },
     { key = "[", mods = "ALT", action = wt.action { ActivateTabRelative = -1 } },
-  }
+  },
+  initial_cols = 200,
+  initial_rows = 45,
 }
+

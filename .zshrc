@@ -222,7 +222,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 export BUN_INSTALL="/Users/home/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-
 # place this after nvm initialization!
 autoload -U add-zsh-hook
 load-nvmrc() {
@@ -243,3 +242,7 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+
+# enable z
+. /usr/local/bin/z.sh

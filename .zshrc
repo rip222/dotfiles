@@ -13,8 +13,6 @@ if [[ -e /usr/share/nvm/init-nvm.sh ]]; then
   source /usr/share/nvm/init-nvm.sh
 fi
 
-OVPN_CONFIG=~/file.ovpn
-alias ovpn="sudo openvpn $OVPN_CONFIG"
 
 if hash exa > /dev/null; then
   alias ls="exa --icons"
@@ -36,7 +34,10 @@ GHISTORY="git log --oneline --all --graph"
 if hash git > /dev/null; then
   alias gh=$GHISTORY
   alias gs="git status"
-  alias cfg="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+  alias gss="git status -s"
+  alias ga="git add"
+  alias gc="git commit -m"
+  alias gca="git commit --amend -m"
 fi
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"

@@ -1,3 +1,10 @@
+-- Setup mason so it can manage external tooling
+local status, mason = pcall(require, 'mason')
+if not status then
+  return
+end
+
+mason.setup()
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
@@ -75,7 +82,8 @@ local servers = {
   'rust_analyzer',
   'pyright',
   'tsserver',
-  'sumneko_lua',
+  -- 'sumneko_lua',
+  'lua_ls',
   'gopls',
   'html',
   'eslint',
@@ -111,7 +119,7 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-require('lspconfig').sumneko_lua.setup({
+require('lspconfig').lua_ls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {

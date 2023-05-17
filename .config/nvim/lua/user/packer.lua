@@ -18,7 +18,8 @@ require('packer').startup(function(use)
   use('nvim-tree/nvim-tree.lua')
   use('nvim-tree/nvim-web-devicons')
 
-  use({ -- LSP Configuration & Plugins
+  use({
+    -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     requires = {
       -- Automatically install LSPs to stdpath for neovim
@@ -35,7 +36,8 @@ require('packer').startup(function(use)
 
   use('onsails/lspkind.nvim') -- vscode-like pictograms for neovim lsp completion items
 
-  use({ -- Autocompletion
+  use({
+    -- Autocompletion
     'hrsh7th/nvim-cmp',
     requires = {
       'hrsh7th/cmp-nvim-lsp',
@@ -44,14 +46,16 @@ require('packer').startup(function(use)
     },
   })
 
-  use({ -- Highlight, edit, and navigate code
+  use({
+    -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     run = function()
       pcall(require('nvim-treesitter.install').update({ with_sync = true }))
     end,
   })
 
-  use({ -- Additional text objects via treesitter
+  use({
+    -- Additional text objects via treesitter
     'nvim-treesitter/nvim-treesitter-textobjects',
     after = 'nvim-treesitter',
   })

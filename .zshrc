@@ -247,3 +247,7 @@ load-nvmrc
 
 # enable z
 . /usr/local/bin/z.sh
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

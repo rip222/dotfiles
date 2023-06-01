@@ -4,8 +4,11 @@ local status, mod = pcall(require, 'telescope')
 if not status then
   return
 end
-mod.setup {
+mod.setup({
   defaults = {
+    layout_config = {
+      vertical = { width = 1 },
+    },
     mappings = {
       i = {
         ['<C-u>'] = false,
@@ -13,8 +16,7 @@ mod.setup {
       },
     },
   },
-}
+})
 
 -- Enable telescope fzf native, if installed
 pcall(mod.load_extension, 'fzf')
-

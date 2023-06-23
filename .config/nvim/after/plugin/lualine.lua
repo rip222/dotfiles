@@ -7,7 +7,7 @@ end
 mod.setup({
   options = {
     icons_enabled = true,
-    theme = theme,
+    theme = THEME,
     component_separators = '|',
     section_separators = '',
   },

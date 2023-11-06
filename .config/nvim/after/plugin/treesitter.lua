@@ -15,7 +15,7 @@ mod.setup({
     'python',
     'rust',
     'typescript',
-    'help',
+    'vimdoc',
     'svelte',
     'html',
     'css',

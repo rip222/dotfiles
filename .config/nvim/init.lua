@@ -1,5 +1,5 @@
 --[[ Control global theme of vim.coloscheme and lualine]]
-THEME = 'onedark'
+-- THEME = 'onedark'
 --[[ 'gruvbox' ]]
 require('user')
 

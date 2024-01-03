@@ -1,108 +1,40 @@
 # Use powerline
 USE_POWERLINE="true"
  
-if ! type brew &>/dev/null  
-then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  brew install zsh-syntax-highlighting
-  brew install zsh-history-substring-search
-  brew install zsh-autosuggestions
-else
-  # Use syntax highlighting
-  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  # Use history substring search
-  source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-  # Use autosuggestion
-  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-  ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
-fi
- 
-if ! type git &>/dev/null  
-then
-  brew install git
-else 
-  alias gh=$GHISTORY
-  alias gs="git status"
-  alias gss="git status -s"
-  alias ga="git add"
-  alias gc="git commit -m"
-  aliaclear="git commit --amend -m"
-fi
- 
-if ! type yadm &>/dev/null  
-then
-  brew install yadm
-  yadm clone https://github.com/rip222/dotfiles.git
-fi
- 
-if ! type go &>/dev/null
-then
-  brew install golang
-fi
- 
-if ! type wezterm &>/dev/null
-then
-  brew install wezterm
-fi
+# Use syntax highlighting
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Use history substring search
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+# Use autosuggestion
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+
+alias gh=$GHISTORY
+alias gs="git status"
+alias gss="git status -s"
+alias ga="git add"
+alias gc="git commit -m"
+aliaclear="git commit --amend -m"
  
 export ZSH="$HOME/.oh-my-zsh"
 plugins=(z)
 source $ZSH/oh-my-zsh.sh
-# Install oh my zsh
-if ! type omz &>/dev/null  
-then
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  cp .zshrc.pre-oh-my-zsh .zshrc
-fi
- 
- 
-# Install exa and set aliases
-if ! type exa &>/dev/null  
-then
-  brew install exa
-else
-  alias ls="exa --icons"
-  alias ll="exa -l --icons"
-  alias la="exa -a --icons"
-  alias lla="exa -al --icons"
-  alias lf="exa -abghHliS --icons"
-fi
- 
- 
-if ! type nvim &>/dev/null  
-then
-  brew install nvim
-else
-  alias v=nvim
-fi
- 
-if ! type codium &>/dev/null  
-then
-  brew install --cask vscodium
-else
-  alias code=codium
-fi
+
+alias ls="exa --icons"
+alias ll="exa -l --icons"
+alias la="exa -a --icons"
+alias lla="exa -al --icons"
+alias lf="exa -abghHliS --icons"
+
+alias v=nvim
+
+alias code=codium
  
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-if ! type nvm &>/dev/null  
-then
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-fi
- 
-if ! type rg &>/dev/null  
-then
-  brew install ripgrep
-fi
- 
-if ! type rustc &>/dev/null  
-then
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-fi
- 
- 
+
 ## Options section
 setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *

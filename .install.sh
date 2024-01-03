@@ -21,14 +21,6 @@ then
   echo "oh my zsh is installed"
 fi
  
-if ! type yadm &>/dev/null  
-then
-  brew install yadm
-  echo "yadm is installed"
-  yadm clone https://github.com/rip222/dotfiles.git
-  echo "dotfiles are copied"
-fi
- 
 if ! type go &>/dev/null
 then
   brew install golang
@@ -80,3 +72,12 @@ then
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   echo "rust is installed"
 fi
+
+if ! type yadm &>/dev/null  
+then
+  brew install yadm
+  echo "yadm is installed"
+  yadm clone -f git@github.com:rip222/dotfiles.git
+  echo "dotfiles are copied"
+fi
+ 

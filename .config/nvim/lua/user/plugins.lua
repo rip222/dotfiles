@@ -96,6 +96,7 @@ local plugins = {
     end,
   },
   'rust-lang/rust.vim',
+  'NvChad/nvim-colorizer.lua',
 
   { 'akinsho/toggleterm.nvim', version = '*' },
 }

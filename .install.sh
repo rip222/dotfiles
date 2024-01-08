@@ -73,6 +73,13 @@ then
   echo "rust is installed"
 fi
 
+if ! type gitui &>/dev/null  
+then
+  brew install gitui
+  echo "gitui is installed"
+fi
+
+
 if ! type yadm &>/dev/null  
 then
   brew install yadm

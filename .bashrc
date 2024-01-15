@@ -136,3 +136,5 @@ ex ()
   fi
 }
 . "$HOME/.cargo/env"
+
+source /Users/home/.config/broot/launcher/bash/br

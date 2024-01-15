@@ -151,6 +151,13 @@ then
   echo "More info: https://github.com/XAMPPRocky/tokei"
 fi
 
+if ! type zoxide &>/dev/null  
+then
+  cargo install --git https://github.com/ajeetdsouza/zoxide
+  echo "zoxide is installed"
+  echo "More info: https://github.com/ajeetdsouza/zoxide"
+fi
+
 if ! type yadm &>/dev/null  
 then
   brew install yadm

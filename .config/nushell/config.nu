@@ -778,6 +778,6 @@ alias gp = git push
 alias la = ls -a
 
 source ~/.config/broot/launcher/nushell/br
-# source ~/.zoxide.nu
+source ~/.zoxide.nu
 
 use ~/.cache/starship/init.nu

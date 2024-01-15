@@ -123,6 +123,34 @@ then
   echo "More info: https://github.com/chmln/sd"
 fi
 
+if ! type starship &>/dev/null  
+then
+  brew install starship
+  echo "starship is installed"
+  echo "More info: https://github.com/starship/starship"
+fi
+
+if ! type zellij &>/dev/null  
+then
+  brew install zellij
+  echo "zellij is installed"
+  echo "More info: https://github.com/zellij-org/zellij"
+fi
+
+if ! type kondo &>/dev/null  
+then
+  brew install kondo
+  echo "kondo is installed"
+  echo "More info: https://github.com/tbillington/kondo"
+fi
+
+if ! type tokei &>/dev/null  
+then
+  brew install tokei
+  echo "tokei is installed"
+  echo "More info: https://github.com/XAMPPRocky/tokei"
+fi
+
 if ! type yadm &>/dev/null  
 then
   brew install yadm

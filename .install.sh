@@ -73,6 +73,27 @@ then
   echo "gitui is installed"
 fi
 
+if ! type volta &>/dev/null  
+then
+  brew install volta
+  echo "volta is installed"
+  echo "More info: https://github.com/volta-cli/volta"
+fi
+
+if ! type delta &>/dev/null  
+then
+  brew install git-delta
+  echo "delta is installed"
+  echo "More info: https://github.com/dandavison/delta"
+fi
+
+
+if ! type broot &>/dev/null  
+then
+  brew install broot
+  echo "broot is installed"
+  echo "More info: https://github.com/Canop/broot"
+fi
 
 if ! type yadm &>/dev/null  
 then

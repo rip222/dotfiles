@@ -204,11 +204,8 @@ RPROMPT='$(git_prompt_string)'
 # Bun
 export BUN_INSTALL="/Users/home/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+export PATH="~/.volta/bin:$PATH"
  
-# pnpm
-export PNPM_HOME="/Users/gardasru/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+
+source /Users/home/.config/broot/launcher/bash/br

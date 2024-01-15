@@ -95,6 +95,34 @@ then
   echo "More info: https://github.com/Canop/broot"
 fi
 
+if ! type bat &>/dev/null  
+then
+  brew install bat
+  echo "bat is installed"
+  echo "More info: https://github.com/sharkdp/bat"
+fi
+
+if ! type btm &>/dev/null  
+then
+  brew install bottom
+  echo "bottom is installed"
+  echo "More info: https://github.com/ClementTsang/bottom"
+fi
+
+if ! type fd &>/dev/null  
+then
+  brew install fd
+  echo "fd is installed"
+  echo "More info: https://github.com/sharkdp/fd"
+fi
+
+if ! type sd &>/dev/null  
+then
+  brew install sd
+  echo "sd is installed"
+  echo "More info: https://github.com/chmln/sd"
+fi
+
 if ! type yadm &>/dev/null  
 then
   brew install yadm

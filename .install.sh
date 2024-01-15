@@ -55,12 +55,6 @@ then
   echo "vscodium is installed"
 fi
  
-if ! type nvm &>/dev/null  
-then
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-  echo "nvm is installed"
-fi
- 
 if ! type rg &>/dev/null  
 then
   brew install ripgrep

@@ -5,7 +5,16 @@ end
 
 return {
   color_scheme = 'Gruvbox Dark',
-  default_prog = { '/bin/zsh', '-l' },
+  default_prog = {
+    -- '/bin/zsh',
+    -- '-l',
+    '/usr/local/bin/nu',
+    '-l',
+    '--config',
+    '~/.config/nushell/config.nu',
+    '--env-config',
+    '~/.config/nushell/env.nu',
+  },
   font = wt.font('JetBrains Mono'),
   font_size = 16,
   window_padding = {

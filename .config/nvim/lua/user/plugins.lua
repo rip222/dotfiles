@@ -27,7 +27,8 @@ local plugins = {
       { 'j-hui/fidget.nvim', tag = 'legacy', event = 'LspAttach' },
     },
   },
-  'jose-elias-alvarez/null-ls.nvim',
+  -- 'jose-elias-alvarez/null-ls.nvim',
+  'nvimtools/none-ls.nvim',
 
   'onsails/lspkind.nvim', -- vscode-like pictograms for neovim lsp completion items
   {

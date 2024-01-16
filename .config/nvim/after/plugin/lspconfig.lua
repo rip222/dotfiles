@@ -78,9 +78,9 @@ vim.cmd.autocmd('BufWritePre', '<buffer>', 'Format')
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
 local servers = {
-  'clangd',
+  -- 'clangd',
   'rust_analyzer',
-  'pyright',
+  -- 'pyright',
   'tsserver',
   -- 'sumneko_lua',
   'lua_ls',
@@ -88,9 +88,10 @@ local servers = {
   'html',
   'eslint',
   'emmet_ls',
-  'prismals',
+  -- 'prismals',
   'angularls',
-  'svelte',
+  -- 'svelte',
+  'tailwindcss',
 }
 
 -- Ensure the servers above are installed

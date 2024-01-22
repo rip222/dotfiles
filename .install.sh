@@ -5,6 +5,8 @@ then
   brew install zsh-history-substring-search
   brew install zsh-autosuggestions
   echo "brew is installed"
+  (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> ~/.profile
+  eval "$(/usr/local/bin/brew shellenv)"
 fi
  
 if ! type git &>/dev/null  

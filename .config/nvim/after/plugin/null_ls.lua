@@ -42,7 +42,7 @@ null_ls.setup({
         return has_eslint and not has_prettier
       end,
     }),
-    null_ls.builtins.formatting.prettierd.with({}),
+    null_ls.builtins.formatting.prettier.with({}),
     null_ls.builtins.code_actions.eslint_d,
   },
 })

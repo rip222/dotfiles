@@ -142,3 +142,16 @@ if vim.cmd.ToggleTerm then
     vim.cmd('2ToggleTerm')
   end)
 end
+
+local neotest = require('neotest')
+if neotest then
+  vim.keymap.set('n', '<leader>ts', function()
+    neotest.summary.toggle()
+  end)
+  vim.keymap.set('n', '<leader>tf', function()
+    neotest.run.run(vim.fn.expand('%'))
+  end)
+  vim.keymap.set('n', '<leader>tt', function()
+    neotest.run.run()
+  end)
+end

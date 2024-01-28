@@ -27,7 +27,6 @@ local plugins = {
       { 'j-hui/fidget.nvim', tag = 'legacy', event = 'LspAttach' },
     },
   },
-  -- 'jose-elias-alvarez/null-ls.nvim',
   'nvimtools/none-ls.nvim',
 
   'onsails/lspkind.nvim', -- vscode-like pictograms for neovim lsp completion items
@@ -87,6 +86,7 @@ local plugins = {
   },
 
   'BeastCode/VSCode-Angular-TypeScript-Snippets',
+  'sp90/angular-control-flow-snippets',
   {
     'Equilibris/nx.nvim',
     dependencies = {
@@ -98,6 +98,15 @@ local plugins = {
   },
   'rust-lang/rust.vim',
   'NvChad/nvim-colorizer.lua',
+  {
+    'nvim-neotest/neotest',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-treesitter/nvim-treesitter',
+      'nvim-neotest/neotest-jest',
+    },
+  },
+  'mattkubej/jest.nvim',
 
   { 'akinsho/toggleterm.nvim', version = '*' },
 }

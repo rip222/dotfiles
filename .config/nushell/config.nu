@@ -384,6 +384,13 @@ $env.config = {
             event: { send: clearscreen }
         }
         {
+            name: clear
+            modifier: control
+            keycode: char_u
+            mode: [emacs, vi_normal, vi_insert]
+            event: { edit: clear }
+        }
+        {
             name: search_history
             modifier: control
             keycode: char_q

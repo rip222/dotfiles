@@ -90,7 +90,7 @@ local servers = {
   'emmet_ls',
   -- 'prismals',
   'angularls',
-  -- 'svelte',
+  'svelte',
   'tailwindcss',
 }
 

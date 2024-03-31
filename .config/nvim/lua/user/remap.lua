@@ -135,23 +135,3 @@ vim.keymap.set('n', '<leader>nx', function()
 end, { desc = '[NX] generators' })
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
-if vim.cmd.ToggleTerm then
-  vim.keymap.set('n', '<C-\\>', vim.cmd.ToggleTerm)
-  vim.keymap.set('t', '<C-\\>', vim.cmd.ToggleTerm)
-  vim.keymap.set('n', '2<C-\\>', function()
-    vim.cmd('2ToggleTerm')
-  end)
-end
-
-local neotest = require('neotest')
-if neotest then
-  vim.keymap.set('n', '<leader>ts', function()
-    neotest.summary.toggle()
-  end)
-  vim.keymap.set('n', '<leader>tf', function()
-    neotest.run.run(vim.fn.expand('%'))
-  end)
-  vim.keymap.set('n', '<leader>tt', function()
-    neotest.run.run()
-  end)
-end

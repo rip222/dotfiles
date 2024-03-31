@@ -98,17 +98,12 @@ local plugins = {
   },
   'rust-lang/rust.vim',
   'NvChad/nvim-colorizer.lua',
-  {
-    'nvim-neotest/neotest',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'nvim-treesitter/nvim-treesitter',
-      'nvim-neotest/neotest-jest',
-    },
-  },
   'mattkubej/jest.nvim',
-
-  { 'akinsho/toggleterm.nvim', version = '*' },
+  {
+    'pmizio/typescript-tools.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+    opts = {},
+  },
 }
 
 local options = {}

@@ -21,6 +21,7 @@ mod.setup({
     'css',
     'scss',
     'prisma',
+    'kotlin'
   },
 
   highlight = { enable = true },

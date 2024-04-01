@@ -1,13 +1,13 @@
-local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
+  vim.fn.system {
     'git',
     'clone',
     '--filter=blob:none',
     'https://github.com/folke/lazy.nvim.git',
     '--branch=stable', -- latest stable release
     lazypath,
-  })
+  }
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -27,8 +27,6 @@ local plugins = {
       { 'j-hui/fidget.nvim', tag = 'legacy', event = 'LspAttach' },
     },
   },
-  'nvimtools/none-ls.nvim',
-
   'onsails/lspkind.nvim', -- vscode-like pictograms for neovim lsp completion items
   {
     -- Autocompletion
@@ -46,7 +44,7 @@ local plugins = {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = function()
-      pcall(require('nvim-treesitter.install').update({ with_sync = true }))
+      pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
   },
   {
@@ -59,7 +57,6 @@ local plugins = {
 
   -- Git related plugins
   'tpope/vim-fugitive',
-  'tpope/vim-rhubarb',
   'lewis6991/gitsigns.nvim',
 
   'ellisonleao/gruvbox.nvim', -- Lua port of the most famous vim colorscheme
@@ -82,7 +79,7 @@ local plugins = {
   {
     'nvim-telescope/telescope-fzf-native.nvim',
     build = 'make',
-    cond = vim.fn.executable('make') == 1,
+    cond = vim.fn.executable 'make' == 1,
   },
 
   'BeastCode/VSCode-Angular-TypeScript-Snippets',
@@ -93,17 +90,13 @@ local plugins = {
       'nvim-telescope/telescope.nvim',
     },
     config = function()
-      require('nx').setup({})
+      require('nx').setup {}
     end,
   },
-  'rust-lang/rust.vim',
   'NvChad/nvim-colorizer.lua',
   'mattkubej/jest.nvim',
-  {
-    'pmizio/typescript-tools.nvim',
-    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
-    opts = {},
-  },
+  'pmizio/typescript-tools.nvim',
+  'stevearc/conform.nvim',
 }
 
 local options = {}

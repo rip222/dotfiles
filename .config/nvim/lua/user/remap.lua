@@ -92,3 +92,7 @@ vim.keymap.set('n', '<leader>nx', function()
 end, { desc = '[NX] generators' })
 
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+
+vim.keymap.set('n', '<leader>hh', function()
+  vim.lsp.inlay_hint.enable(vim.lsp.inlay_hint.is_enabled())
+end)

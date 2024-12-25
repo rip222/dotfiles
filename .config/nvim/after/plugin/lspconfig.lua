@@ -78,20 +78,15 @@ vim.cmd.autocmd('BufWritePre', '<buffer>', 'Format')
 -- Enable the following language servers
 -- Feel free to add/remove any LSPs that you want here. They will automatically be installed
 local servers = {
-  -- 'clangd',
   'rust_analyzer',
-  -- 'pyright',
-  -- 'tsserver',
-  -- 'sumneko_lua',
   'lua_ls',
-  'gopls',
   'html',
   'eslint',
   'emmet_ls',
-  -- 'prismals',
   'angularls',
-  'svelte',
   'tailwindcss',
+  'nil_ls'
+
 }
 
 -- Ensure the servers above are installed
@@ -164,6 +159,16 @@ require('lspconfig').emmet_ls.setup({
       },
     },
   },
+})
+
+require('lspconfig').nil_ls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    nil_ls = {
+      formatter = { command = { "nixpkgs=fmt" } }
+    }
+  }
 })
 
 -- require('lspconfig').tsserver.setup({

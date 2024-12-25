@@ -4,11 +4,11 @@ if not ok then
 end
 
 return {
-  color_scheme = 'Gruvbox Dark',
+  color_scheme = 'tokyonight',
   default_prog = {
     -- '/bin/zsh',
     -- '-l',
-    '/usr/local/bin/nu',
+    '/run/current-system/sw/bin/nu',
     '-l',
     '--config',
     '~/.config/nushell/config.nu',

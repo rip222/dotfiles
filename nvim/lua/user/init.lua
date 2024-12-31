@@ -1,4 +1,3 @@
-require('user.set')
-require('user.plugins')
-require('user.remap')
-require('user.misc')
+require 'user.set'
+require 'user.misc'
+require 'user.remap'

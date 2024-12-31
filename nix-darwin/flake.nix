@@ -27,6 +27,8 @@
           "mullvadvpn"
           "google-chrome"
           "gitbutler"
+          "firefox"
+          
         ];
 
         masApps = {
@@ -61,7 +63,10 @@
           pkgs.tokei
           pkgs.zoxide
           pkgs.stow
-          pkgs.yadm
+          pkgs.lua
+          pkgs.luarocks
+          pkgs.ffmpeg
+          pkgs.yt-dlp
         ];
 
         environment.shellAliases = {

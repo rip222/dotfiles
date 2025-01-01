@@ -162,7 +162,7 @@
 
       system.defaults.CustomUserPreferences = {};
 
-      power.sleep.computer = 60;
+      power.sleep.computer = 480;
       power.sleep.display = 60;
 
       security.pam.enableSudoTouchIdAuth = true;

@@ -12,7 +12,10 @@
     configuration = { pkgs, ... }: {
       homebrew = {
         enable = true;
-        brews = [];
+        brews = [
+        "fish"
+        "carapace"
+        ];
         casks = [
           "lulu"
           "oversight"

@@ -28,7 +28,7 @@
           "google-chrome"
           "gitbutler"
           "firefox"
-          
+          "telegram"
         ];
 
         masApps = {

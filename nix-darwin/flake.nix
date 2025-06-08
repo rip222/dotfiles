@@ -81,6 +81,7 @@
         };
 
 
+    system.primaryUser = "home";
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
@@ -168,7 +169,7 @@
       power.sleep.computer = 480;
       power.sleep.display = 60;
 
-      security.pam.enableSudoTouchIdAuth = true;
+      security.pam.services.sudo_local.touchIdAuth = true;
     };
   in
   {
